@@ -1,0 +1,2 @@
+ALTER TABLE [Maxis].[dbo].[InvoiceDB]
+DROP COLUMN BLDAT_1
