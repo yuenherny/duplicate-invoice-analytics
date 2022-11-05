@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Maxis-Task1", "Maxis-Task1\Maxis-Task1.dtproj", "{AB8FF582-BBAE-4ADC-8A35-A7D22BB52860}"
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Maxis-Case-Study", "Maxis-Task1\Maxis-Case-Study.dtproj", "{AB8FF582-BBAE-4ADC-8A35-A7D22BB52860}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

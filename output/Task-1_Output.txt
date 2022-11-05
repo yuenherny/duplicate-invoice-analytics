@@ -1,1 +1,21 @@
 XBLNR,Count all
+NC18001047MJCK  ,3
+RPRB-SD         ,2
+NC18003330JCCW  ,2
+9130078233      ,2
+9130078333      ,2
+KNDU-SD         ,2
+0000305920-1    ,2
+RTHO-SD         ,2
+MAL1858633      ,2
+000008022018REPP,6
+MAL1859336      ,2
+I-18070333      ,2
+SMJU-SD         ,2
+PHAB-SD         ,2
+MAL1858331      ,2
+MAL1858330      ,2
+RIAM-SD         ,2
+TUD3-SD         ,2
+BBP2-SD         ,2
+JPOT-SD         ,2

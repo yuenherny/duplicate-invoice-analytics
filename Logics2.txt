@@ -1,0 +1,13 @@
+Task 2
+
+Logics for NEAR duplicate invoice is:
+1. High similarity (>90%) for "Invoice Reference Number on Physical Invoice" (XBLNR)
+2. Exact text for "Invoice Document Date" (BLDAT), "Vendor Code" (LIFNR) and "Invoice Amount" (DMBTR).
+3. Near duplicate records are identified using "_key_out" column in "Task-2_Output.txt", then checked against the full duplicate record in "Task-2_NearDuplicateRecords_Full.txt"
+
+Justification:
+1. Finding near duplicate invoice is to check if any records are added accidentally or intentionally for nefarious purposes.
+2. Using the same columns as exact duplicates, we find near duplicates via high similarity for "Invoice Reference Number on Physical Invoice" (XBLNR) while maintaining exact text for "Invoice Document Date" (BLDAT), "Vendor Code" (LIFNR) and "Invoice Amount" (DMBTR).
+    - The mean length of XBLNR is 13.41, while median length is 16. This suggests that there are some very short invoice number that skewed the mean. Hence we take median as reference.
+    - If near duplicates is defined as one (1) character difference, then 1/16=0.0625 or 6.25% is the tolerance we take into account when deciding similarity.
+    - Similarity of 90% is chosen to allow more tolerance as some invoice reference number could be less than 16 characters.

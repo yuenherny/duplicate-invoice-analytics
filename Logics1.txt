@@ -1,0 +1,11 @@
+Task 1
+
+Logics for EXACT duplicate invoice is:
+1. Similar "Invoice Reference Number on Physical Invoice" (XBLNR), "Invoice Document Date" (BLDAT), "Vendor Code" (LIFNR) and "Invoice Amount" (DMBTR).
+
+Justification:
+1. Finding duplicate invoice is to avoid same invoice being included in company expenses twice.
+2. Although "Line Item" (BUZEI) and "Accounting Document Number" (BELNR) is the unique key for the record, there were duplicate still some records with the same BUZEI and BELNR.
+3. Adding XBLNR to BUZEI and BELNR as unique identifier returns no records. However this might be misleading if there were whitespaces around XBLNR, BUZEI and BELNR.
+4. Hence the most direct way would be checking duplicate invoice via "Invoice Reference Number on Physical Invoice" (XBLNR), "Invoice Document Date" (BLDAT), "Vendor Code" (LIFNR) and "Invoice Amount" (DMBTR).
+    - Each invoice from a single vendor should not have the same reference number, date and amount.
