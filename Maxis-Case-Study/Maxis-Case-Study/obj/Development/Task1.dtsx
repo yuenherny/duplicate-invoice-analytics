@@ -11,8 +11,8 @@
   DTS:LocaleID="17417"
   DTS:ObjectName="Task1"
   DTS:PackageType="5"
-  DTS:VersionBuild="59"
-  DTS:VersionGUID="{479EB826-454B-47AA-B29F-549A3607CC2C}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{01CAF22E-89A4-4C1E-9E5F-B1B0576FB9B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -314,11 +314,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Aggregate"
+              refId="Package\Data Flow Task\Aggregate using Group By"
               componentClassID="Microsoft.Aggregate"
               contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
               description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
-              name="Aggregate"
+              name="Aggregate using Group By"
               version="3">
               <properties>
                 <property
@@ -346,28 +346,28 @@
               </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1]"
+                  refId="Package\Data Flow Task\Aggregate using Group By.Inputs[Aggregate Input 1]"
                   name="Aggregate Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[XBLNR]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Inputs[Aggregate Input 1].Columns[XBLNR]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="16"
                       cachedName="XBLNR"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[XBLNR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[BLDAT]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Inputs[Aggregate Input 1].Columns[BLDAT]"
                       cachedDataType="date"
                       cachedName="BLDAT"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]" />
+                      lineageId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[DMBTR]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Inputs[Aggregate Input 1].Columns[DMBTR]"
                       cachedDataType="r4"
                       cachedName="DMBTR"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DMBTR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1].Columns[LIFNR]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Inputs[Aggregate Input 1].Columns[LIFNR]"
                       cachedDataType="i4"
                       cachedName="LIFNR"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LIFNR]" />
@@ -377,7 +377,7 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1]"
+                  refId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1]"
                   name="Aggregate Output 1">
                   <properties>
                     <property
@@ -392,11 +392,11 @@
                   </properties>
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[XBLNR]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[XBLNR]"
                       codePage="1252"
                       dataType="str"
                       length="16"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[XBLNR]"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[XBLNR]"
                       name="XBLNR">
                       <properties>
                         <property
@@ -420,16 +420,16 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[BLDAT]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[BLDAT]"
                       dataType="date"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[BLDAT]"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[BLDAT]"
                       name="BLDAT">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]}</property>
+                          name="AggregationColumnId">#{Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -446,9 +446,9 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[DMBTR]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[DMBTR]"
                       dataType="r4"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[DMBTR]"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[DMBTR]"
                       name="DMBTR">
                       <properties>
                         <property
@@ -472,9 +472,9 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[LIFNR]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[LIFNR]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[LIFNR]"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[LIFNR]"
                       name="LIFNR">
                       <properties>
                         <property
@@ -498,9 +498,9 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
+                      refId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[Count all]"
                       dataType="ui8"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[Count all]"
                       name="Count all">
                       <properties>
                         <property
@@ -529,274 +529,20 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[Count all]"
-                      cachedDataType="ui8"
-                      cachedName="Count all"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[DuplicateRecords]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="DuplicateRecords"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(DT_I4)#{Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]} &gt; 1</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">(DT_I4)[Count all] &gt; 1</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[UniqueRecords]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="UniqueRecords"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Conditional Split 1"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input].Columns[BLDAT]"
-                      cachedDataType="date"
-                      cachedName="BLDAT"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split 1.Outputs[IsNull]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="IsNull"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(BLDAT)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split 1.Outputs[NotNull]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="NotNull"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[BLDAT_1]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="BLDAT_1"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BLDAT_1]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]"
-                      dataType="date"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="IgnoreFailure"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]"
-                      name="BLDAT"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BLDAT_1]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">true</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Derived Column"
+              refId="Package\Data Flow Task\Change date format to YYYY-MM-DD"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              name="Change date format to YYYY-MM-DD"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[BLDAT_1]"
+                      refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input].Columns[BLDAT_1]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="BLDAT_1"
@@ -826,31 +572,31 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -859,221 +605,80 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="17417"
-              name="Flat File Destination"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Task1Output]"
-                  connectionManagerRefId="Package.ConnectionManagers[Task1Output]"
-                  name="FlatFileConnection" />
-              </connections>
+              refId="Package\Data Flow Task\Convert to datetime"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Convert to datetime"
+              usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
+                  refId="Package\Data Flow Task\Convert to datetime.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Count all]"
-                      cachedDataType="ui8"
-                      cachedName="Count all"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Count all]"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[XBLNR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="16"
-                      cachedName="XBLNR"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
-                      lineageId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1].Columns[XBLNR]" />
+                      refId="Package\Data Flow Task\Convert to datetime.Inputs[Data Conversion Input].Columns[BLDAT_1]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="BLDAT_1"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BLDAT_1]" />
                   </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
-                      codePage="1252"
-                      dataType="str"
-                      length="16"
-                      name="XBLNR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Count all]"
-                      dataType="ui8"
-                      name="Count all" />
-                  </externalMetadataColumns>
+                  <externalMetadataColumns />
                 </input>
               </inputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Flat File Destination 1"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="17417"
-              name="Flat File Destination 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Destination 1.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FullDatasetOutput]"
-                  connectionManagerRefId="Package.ConnectionManagers[FullDatasetOutput]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[BUKRS]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="BUKRS"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BUKRS]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BUKRS]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[LIFNR]"
-                      cachedDataType="i4"
-                      cachedName="LIFNR"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LIFNR]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LIFNR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[GJAHR]"
-                      cachedDataType="i2"
-                      cachedName="GJAHR"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[GJAHR]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GJAHR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[BELNR]"
-                      cachedDataType="i8"
-                      cachedName="BELNR"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BELNR]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BELNR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[BUZEI]"
-                      cachedDataType="i1"
-                      cachedName="BUZEI"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BUZEI]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BUZEI]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[XBLNR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="16"
-                      cachedName="XBLNR"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[XBLNR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[BLART]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="BLART"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BLART]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BLART]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[DMBTR]"
-                      cachedDataType="r4"
-                      cachedName="DMBTR"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[DMBTR]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DMBTR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[BLDAT]"
-                      cachedDataType="date"
-                      cachedName="BLDAT"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BLDAT]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BUKRS]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="BUKRS" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LIFNR]"
-                      dataType="i4"
-                      name="LIFNR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[GJAHR]"
-                      dataType="i2"
-                      name="GJAHR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BELNR]"
-                      dataType="i8"
-                      name="BELNR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BUZEI]"
-                      dataType="i1"
-                      name="BUZEI" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
-                      codePage="1252"
-                      dataType="str"
-                      length="16"
-                      name="XBLNR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BLART]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="BLART" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[DMBTR]"
-                      dataType="r4"
-                      name="DMBTR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BLDAT]"
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Convert to datetime.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]"
                       dataType="date"
-                      name="BLDAT" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[BLDAT_1]"
-                      dataType="wstr"
-                      length="10"
-                      name="BLDAT_1" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]"
+                      name="BLDAT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BLDAT_1]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">true</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Convert to datetime.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
             </component>
             <component
               refId="Package\Data Flow Task\Flat File Source"
@@ -1483,11 +1088,339 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Data Flow Task\Remove row with NULL datetime"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Remove row with NULL datetime"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Remove row with NULL datetime.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Remove row with NULL datetime.Inputs[Conditional Split Input].Columns[BLDAT]"
+                      cachedDataType="date"
+                      cachedName="BLDAT"
+                      lineageId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[IsNull]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="IsNull"
+                  synchronousInputId="Package\Data Flow Task\Remove row with NULL datetime.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(BLDAT)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[NotNull]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NotNull"
+                  synchronousInputId="Package\Data Flow Task\Remove row with NULL datetime.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Remove row with NULL datetime.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Split duplicate from unique records"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Split duplicate from unique records"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Split duplicate from unique records.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Split duplicate from unique records.Inputs[Conditional Split Input].Columns[Count all]"
+                      cachedDataType="ui8"
+                      cachedName="Count all"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[Count all]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Split duplicate from unique records.Outputs[DuplicateRecords]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="DuplicateRecords"
+                  synchronousInputId="Package\Data Flow Task\Split duplicate from unique records.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(DT_I4)#{Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[Count all]} &gt; 1</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(DT_I4)[Count all] &gt; 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Split duplicate from unique records.Outputs[UniqueRecords]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="UniqueRecords"
+                  synchronousInputId="Package\Data Flow Task\Split duplicate from unique records.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Split duplicate from unique records.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Data Flow Task\Split duplicate from unique records.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Split duplicate from unique records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Split duplicate from unique records.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Split duplicate from unique records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Split duplicate from unique records.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Write cleaned dataset to file"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="17417"
+              name="Write cleaned dataset to file"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Write cleaned dataset to file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FullDatasetOutput]"
+                  connectionManagerRefId="Package.ConnectionManagers[FullDatasetOutput]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[BUKRS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="BUKRS"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BUKRS]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BUKRS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[LIFNR]"
+                      cachedDataType="i4"
+                      cachedName="LIFNR"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[LIFNR]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LIFNR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[GJAHR]"
+                      cachedDataType="i2"
+                      cachedName="GJAHR"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[GJAHR]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GJAHR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[BELNR]"
+                      cachedDataType="i8"
+                      cachedName="BELNR"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BELNR]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BELNR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[BUZEI]"
+                      cachedDataType="i1"
+                      cachedName="BUZEI"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BUZEI]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BUZEI]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[XBLNR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="XBLNR"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[XBLNR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[BLART]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="BLART"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BLART]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BLART]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[DMBTR]"
+                      cachedDataType="r4"
+                      cachedName="DMBTR"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[DMBTR]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DMBTR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].Columns[BLDAT]"
+                      cachedDataType="date"
+                      cachedName="BLDAT"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BLDAT]"
+                      lineageId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BUKRS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="BUKRS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[LIFNR]"
+                      dataType="i4"
+                      name="LIFNR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[GJAHR]"
+                      dataType="i2"
+                      name="GJAHR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BELNR]"
+                      dataType="i8"
+                      name="BELNR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BUZEI]"
+                      dataType="i1"
+                      name="BUZEI" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="XBLNR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BLART]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="BLART" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[DMBTR]"
+                      dataType="r4"
+                      name="DMBTR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BLDAT]"
+                      dataType="date"
+                      name="BLDAT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input].ExternalColumns[BLDAT_1]"
+                      dataType="wstr"
+                      length="10"
+                      name="BLDAT_1" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Write cleaned dataset to OLE DB"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="Write cleaned dataset to OLE DB"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1540,7 +1473,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[Connect2MaxisDB]"
                   connectionManagerRefId="Package.ConnectionManagers[Connect2MaxisDB]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1548,115 +1481,115 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BUKRS]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[BUKRS]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="5"
                       cachedName="BUKRS"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BUKRS]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BUKRS]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BUKRS]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LIFNR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[LIFNR]"
                       cachedDataType="i4"
                       cachedName="LIFNR"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIFNR]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[LIFNR]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LIFNR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GJAHR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[GJAHR]"
                       cachedDataType="i2"
                       cachedName="GJAHR"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GJAHR]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[GJAHR]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GJAHR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BELNR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[BELNR]"
                       cachedDataType="i8"
                       cachedName="BELNR"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BELNR]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BELNR]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BELNR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BUZEI]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[BUZEI]"
                       cachedDataType="i1"
                       cachedName="BUZEI"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BUZEI]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BUZEI]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BUZEI]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[XBLNR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[XBLNR]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="16"
                       cachedName="XBLNR"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[XBLNR]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[XBLNR]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[XBLNR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BLART]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[BLART]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="5"
                       cachedName="BLART"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BLART]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BLART]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[BLART]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DMBTR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[DMBTR]"
                       cachedDataType="r4"
                       cachedName="DMBTR"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DMBTR]"
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[DMBTR]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DMBTR]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BLDAT]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].Columns[BLDAT]"
                       cachedDataType="date"
                       cachedName="BLDAT"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BLDAT]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[BLDAT]" />
+                      externalMetadataColumnId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BLDAT]"
+                      lineageId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output].Columns[BLDAT]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BUKRS]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BUKRS]"
                       codePage="1252"
                       dataType="str"
                       length="5"
                       name="BUKRS" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIFNR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[LIFNR]"
                       dataType="i4"
                       name="LIFNR" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[GJAHR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[GJAHR]"
                       dataType="i2"
                       name="GJAHR" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BELNR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BELNR]"
                       dataType="i8"
                       name="BELNR" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BUZEI]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BUZEI]"
                       dataType="i2"
                       name="BUZEI" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[XBLNR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[XBLNR]"
                       codePage="1252"
                       dataType="str"
                       length="16"
                       name="XBLNR" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BLART]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BLART]"
                       codePage="1252"
                       dataType="str"
                       length="5"
                       name="BLART" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DMBTR]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[DMBTR]"
                       dataType="r4"
                       name="DMBTR" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BLDAT]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input].ExternalColumns[BLDAT]"
                       dataType="dbTimeStamp"
                       name="BLDAT" />
                   </externalMetadataColumns>
@@ -1664,22 +1597,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1687,63 +1620,130 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Data Flow Task\Write duplicate records to file"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="17417"
+              name="Write duplicate records to file"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Write duplicate records to file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Task1Output]"
+                  connectionManagerRefId="Package.ConnectionManagers[Task1Output]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input].Columns[Count all]"
+                      cachedDataType="ui8"
+                      cachedName="Count all"
+                      externalMetadataColumnId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input].ExternalColumns[Count all]"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[Count all]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input].Columns[XBLNR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="XBLNR"
+                      externalMetadataColumnId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
+                      lineageId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1].Columns[XBLNR]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input].ExternalColumns[XBLNR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="XBLNR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input].ExternalColumns[Count all]"
+                      dataType="ui8"
+                      name="Count all" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Aggregate Output 1]"
-              endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
+              endId="Package\Data Flow Task\Split duplicate from unique records.Inputs[Conditional Split Input]"
               name="Aggregate Output 1"
-              startId="Package\Data Flow Task\Aggregate.Outputs[Aggregate Output 1]" />
+              startId="Package\Data Flow Task\Aggregate using Group By.Outputs[Aggregate Output 1]" />
             <path
               refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\Conditional Split 1.Inputs[Conditional Split Input]"
+              endId="Package\Data Flow Task\Remove row with NULL datetime.Inputs[Conditional Split Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Data Flow Task\Convert to datetime.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Data Flow Task\Convert to datetime.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[DuplicateRecords]"
               endId="Package\Data Flow Task\Multicast 1.Inputs[Multicast Input 1]"
               name="DuplicateRecords"
-              startId="Package\Data Flow Task\Conditional Split.Outputs[DuplicateRecords]" />
+              startId="Package\Data Flow Task\Split duplicate from unique records.Outputs[DuplicateRecords]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Multicast Output 1]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Write cleaned dataset to OLE DB.Inputs[OLE DB Destination Input]"
               name="Multicast Output 1"
               startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
             <path
               refId="Package\Data Flow Task.Paths[Multicast Output 11]"
-              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              endId="Package\Data Flow Task\Write duplicate records to file.Inputs[Flat File Destination Input]"
               name="Multicast Output 1"
               startId="Package\Data Flow Task\Multicast 1.Outputs[Multicast Output 1]" />
             <path
               refId="Package\Data Flow Task.Paths[Multicast Output 2]"
-              endId="Package\Data Flow Task\Aggregate.Inputs[Aggregate Input 1]"
+              endId="Package\Data Flow Task\Aggregate using Group By.Inputs[Aggregate Input 1]"
               name="Multicast Output 2"
               startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
             <path
               refId="Package\Data Flow Task.Paths[Multicast Output 3]"
-              endId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input]"
+              endId="Package\Data Flow Task\Write cleaned dataset to file.Inputs[Flat File Destination Input]"
               name="Multicast Output 3"
               startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]" />
             <path
               refId="Package\Data Flow Task.Paths[NotNull]"
               endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
               name="NotNull"
-              startId="Package\Data Flow Task\Conditional Split 1.Outputs[NotNull]" />
+              startId="Package\Data Flow Task\Remove row with NULL datetime.Outputs[NotNull]" />
             <path
               refId="Package\Data Flow Task.Paths[UniqueRecords]"
               endId="Package\Data Flow Task\Multicast 2.Inputs[Multicast Input 1]"
               name="UniqueRecords"
-              startId="Package\Data Flow Task\Conditional Split.Outputs[UniqueRecords]" />
+              startId="Package\Data Flow Task\Split duplicate from unique records.Outputs[UniqueRecords]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1774,17 +1774,17 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="634,50" />
+          Size="240,42"
+          Id="Package\Data Flow Task\Write cleaned dataset to OLE DB"
+          TopLeft="587,52" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\Flat File Destination"
+          Size="221,42"
+          Id="Package\Data Flow Task\Write duplicate records to file"
           TopLeft="1261.5,69.75" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="106,205" />
+          Size="175,42"
+          Id="Package\Data Flow Task\Convert to datetime"
+          TopLeft="102,190" />
         <NodeLayout
           Size="132,42"
           Id="Package\Data Flow Task\Multicast 2"
@@ -1796,85 +1796,73 @@
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="111,54" />
+          TopLeft="114,30" />
         <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="106,127" />
+          Size="262,42"
+          Id="Package\Data Flow Task\Change date format to YYYY-MM-DD"
+          TopLeft="60,110" />
         <NodeLayout
           Size="123,42"
           Id="Package\Data Flow Task\Multicast"
-          TopLeft="447,194" />
+          TopLeft="412,179" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\Aggregate"
-          TopLeft="617,176" />
+          Size="208,42"
+          Id="Package\Data Flow Task\Aggregate using Group By"
+          TopLeft="614,177" />
         <NodeLayout
-          Size="159,42"
-          Id="Package\Data Flow Task\Conditional Split"
-          TopLeft="826.75,174.5" />
+          Size="248,42"
+          Id="Package\Data Flow Task\Split duplicate from unique records"
+          TopLeft="880.75,169.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[UniqueRecords]"
-          TopLeft="906.25,216.5">
+          TopLeft="1004.75,211.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="238.5,58.5000000000001"
+              EndConnector="140,63.5"
               Start="0,0"
-              End="238.5,51.0000000000001">
+              End="140,56">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.25" />
+                    End="0,27.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.25"
-                    Point2="0,29.25"
-                    Point3="4,29.25" />
+                    Point1="0,27.75"
+                    Point2="0,31.75"
+                    Point3="4,31.75" />
                   <mssgle:LineSegment
-                    End="234.5,29.25" />
+                    End="136,31.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="234.5,29.25"
-                    Point2="238.5,29.25"
-                    Point3="238.5,33.25" />
+                    Point1="136,31.75"
+                    Point2="140,31.75"
+                    Point3="140,35.75" />
                   <mssgle:LineSegment
-                    End="238.5,51.0000000000001" />
+                    End="140,56" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="85.7184765625,34.25,67.063046875,11.609375"
+              BoundingBox="36.4684765625,36.75,67.063046875,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Multicast Output 2]"
-          TopLeft="570,215">
+          TopLeft="535,199">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="47,-18"
+              EndConnector="79,0"
               Start="0,0"
-              End="39.5,-18">
+              End="71.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="19.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,0"
-                    Point2="23.5,0"
-                    Point3="23.5,-4" />
-                  <mssgle:LineSegment
-                    End="23.5,-14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.5,-14"
-                    Point2="23.5,-18"
-                    Point3="27.5,-18" />
-                  <mssgle:LineSegment
-                    End="39.5,-18" />
+                    End="71.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1907,30 +1895,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Multicast Output 1]"
-          TopLeft="508.5,194">
+          TopLeft="473.5,179">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="214,-102"
+              EndConnector="233.5,-85"
               Start="0,0"
-              End="214,-94.5">
+              End="233.5,-77.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-47" />
+                    End="0,-38.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-47"
-                    Point2="0,-51"
-                    Point3="4,-51" />
+                    Point1="0,-38.5"
+                    Point2="0,-42.5"
+                    Point3="4,-42.5" />
                   <mssgle:LineSegment
-                    End="210,-51" />
+                    End="229.5,-42.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="210,-51"
-                    Point2="214,-51"
-                    Point3="214,-55" />
+                    Point1="229.5,-42.5"
+                    Point2="233.5,-42.5"
+                    Point3="233.5,-46.5" />
                   <mssgle:LineSegment
-                    End="214,-94.5" />
+                    End="233.5,-77.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1941,7 +1929,153 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="187,96">
+          TopLeft="191.5,72">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[DuplicateRecords]"
+          TopLeft="1004.75,169.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,-62"
+              Start="0,0"
+              End="120,-54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-27"
+                    Point2="0,-31"
+                    Point3="4,-31" />
+                  <mssgle:LineSegment
+                    End="116,-31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116,-31"
+                    Point2="120,-31"
+                    Point3="120,-35" />
+                  <mssgle:LineSegment
+                    End="120,-54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="12.57876953125,-26,94.8424609375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="190.25,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,7.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
+          TopLeft="822,194.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.75,0"
+              Start="0,0"
+              End="51.25,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.25,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Data Flow Task\Write cleaned dataset to file"
+          TopLeft="593,280" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Multicast Output 3]"
+          TopLeft="492.666666666667,221">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="207.333333333333,59"
+              Start="0,0"
+              End="207.333333333333,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.0545746388443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.0545746388443"
+                    Point2="0,24.0545746388443"
+                    Point3="4,24.0545746388443" />
+                  <mssgle:LineSegment
+                    End="203.333333333333,24.0545746388443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="203.333333333333,24.0545746388443"
+                    Point2="207.333333333333,24.0545746388443"
+                    Point3="207.333333333333,28.0545746388443" />
+                  <mssgle:LineSegment
+                    End="207.333333333333,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Data Flow Task\Remove row with NULL datetime"
+          TopLeft="104,263" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="187.25,232">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1962,208 +2096,38 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[DuplicateRecords]"
-          TopLeft="906.25,174.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="218.5,-67"
-              Start="0,0"
-              End="218.5,-59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-29.5"
-                    Point2="0,-33.5"
-                    Point3="4,-33.5" />
-                  <mssgle:LineSegment
-                    End="214.5,-33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="214.5,-33.5"
-                    Point2="218.5,-33.5"
-                    Point3="218.5,-37.5" />
-                  <mssgle:LineSegment
-                    End="218.5,-59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="61.82876953125,-28.5,94.8424609375,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="185,169">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-24,36"
-              Start="0,0"
-              End="-24,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.3874538745387" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.3874538745387"
-                    Point2="0,21.3874538745387"
-                    Point3="-4,21.3874538745387" />
-                  <mssgle:LineSegment
-                    End="-20,21.3874538745387" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20,21.3874538745387"
-                    Point2="-24,21.3874538745387"
-                    Point3="-24,25.3874538745387" />
-                  <mssgle:LineSegment
-                    End="-24,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-20,26.3874538745387,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Aggregate Output 1]"
-          TopLeft="747,196.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="79.75,0"
-              Start="0,0"
-              End="72.25,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="72.25,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Data Flow Task\Flat File Destination 1"
-          TopLeft="593,280" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 3]"
-          TopLeft="508.5,236">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="177,44"
-              Start="0,0"
-              End="177,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18"
-                    Point2="0,22"
-                    Point3="4,22" />
-                  <mssgle:LineSegment
-                    End="173,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="173,22"
-                    Point2="177,22"
-                    Point3="177,26" />
-                  <mssgle:LineSegment
-                    End="177,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Data Flow Task\Conditional Split 1"
-          TopLeft="309,89" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="212,205">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="154.333333333333,-74"
-              Start="0,0"
-              End="154.333333333333,-66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-34.0186963112683" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-34.0186963112683"
-                    Point2="0,-38.0186963112683"
-                    Point3="4,-38.0186963112683" />
-                  <mssgle:LineSegment
-                    End="150.333333333333,-38.0186963112683" />
-                  <mssgle:CubicBezierSegment
-                    Point1="150.333333333333,-38.0186963112683"
-                    Point2="154.333333333333,-38.0186963112683"
-                    Point3="154.333333333333,-42.0186963112683" />
-                  <mssgle:LineSegment
-                    End="154.333333333333,-66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Data Flow Task.Paths[NotNull]"
-          TopLeft="419.666666666667,131">
+          TopLeft="262,263">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="69.6666666666667,63"
+              EndConnector="192.333333333333,-42"
               Start="0,0"
-              End="69.6666666666667,55.5">
+              End="192.333333333333,-34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.3665631177634" />
+                    End="0,-16.838252382059" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.3665631177634"
-                    Point2="0,31.3665631177634"
-                    Point3="4,31.3665631177634" />
+                    Point1="0,-16.838252382059"
+                    Point2="0,-20.838252382059"
+                    Point3="4,-20.838252382059" />
                   <mssgle:LineSegment
-                    End="65.6666666666667,31.3665631177634" />
+                    End="188.333333333333,-20.838252382059" />
                   <mssgle:CubicBezierSegment
-                    Point1="65.6666666666667,31.3665631177634"
-                    Point2="69.6666666666667,31.3665631177634"
-                    Point3="69.6666666666667,35.3665631177634" />
+                    Point1="188.333333333333,-20.838252382059"
+                    Point2="192.333333333333,-20.838252382059"
+                    Point3="192.333333333333,-24.838252382059" />
                   <mssgle:LineSegment
-                    End="69.6666666666667,55.5" />
+                    End="192.333333333333,-34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="26.8333333333333,36.3665631177634,16,16"
+              BoundingBox="88.1666666666667,-15.838252382059,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2171,7 +2135,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\Write cleaned dataset to OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
