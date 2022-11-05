@@ -11,8 +11,8 @@
   DTS:LocaleID="17417"
   DTS:ObjectName="Task1"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{6E842742-F768-4C0C-B92E-A68AB4347241}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{01CAF22E-89A4-4C1E-9E5F-B1B0576FB9B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -529,20 +529,20 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD"
+              refId="Package\Data Flow Task\Change date format to YYYY-MM-DD"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Change datetime format to YYYY-MM-DD"
+              name="Change date format to YYYY-MM-DD"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Inputs[Derived Column Input]"
+                  refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Inputs[Derived Column Input].Columns[BLDAT_1]"
+                      refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input].Columns[BLDAT_1]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="BLDAT_1"
@@ -572,31 +572,31 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Outputs[Derived Column Output]"
+                  refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Outputs[Derived Column Error Output]"
+                  refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1703,7 +1703,7 @@
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
               endId="Package\Data Flow Task\Convert to datetime.Inputs[Data Conversion Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[DuplicateRecords]"
               endId="Package\Data Flow Task\Multicast 1.Inputs[Multicast Input 1]"
@@ -1711,7 +1711,7 @@
               startId="Package\Data Flow Task\Split duplicate from unique records.Outputs[DuplicateRecords]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Change datetime format to YYYY-MM-DD.Inputs[Derived Column Input]"
+              endId="Package\Data Flow Task\Change date format to YYYY-MM-DD.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
             <path
@@ -1798,9 +1798,9 @@
           Id="Package\Data Flow Task\Flat File Source"
           TopLeft="114,30" />
         <NodeLayout
-          Size="283,42"
-          Id="Package\Data Flow Task\Change datetime format to YYYY-MM-DD"
-          TopLeft="51,109" />
+          Size="262,42"
+          Id="Package\Data Flow Task\Change date format to YYYY-MM-DD"
+          TopLeft="60,110" />
         <NodeLayout
           Size="123,42"
           Id="Package\Data Flow Task\Multicast"
@@ -1929,18 +1929,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="192.25,72">
+          TopLeft="191.5,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,29.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1987,25 +1987,25 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="191,151">
+          TopLeft="190.25,152">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,31.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8,7.75,16,16"
+              BoundingBox="-8,7.25,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
